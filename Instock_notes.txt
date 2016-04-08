@@ -1,0 +1,12 @@
+instock reports
+
+
+1. Replenishment In-stock -BI_INSTOCK_REPORT_v1.2.pl
+   file: Replenishment In-stock v1.21.xlsx :ok
+2. In Stock Report -BI_INSTOCK_REPORT.pl
+   file: Instock_report.xlsx :ok
+3. Non Replenishment In-stock -BI_INSTOCK_REPORT_NONREP_v1.pl
+   file: Non Replenishment In-stock v1.xlsx :ok
+4. In Stock Report, International - Asian Items -BI_INSTOCK_REPORT_BY_COUNTRY_v2.pl
+   file: INSTOCK_REPORT_INTERNATIONAL_v2.xlsx :ok
+5. In Stock Report, NBB

@@ -1,0 +1,4 @@
+Exception Report. Transactions posted beyond 12AM. 
+
+Regards,
+ARC BI Support
