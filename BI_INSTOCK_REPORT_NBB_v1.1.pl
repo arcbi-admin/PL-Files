@@ -84,7 +84,8 @@ printf "IN STOCK REPORT, NBB \n";
 &s12;
 &s13a;
 &s13b;
-&tg7;
+&d1;
+&d2;
 &f4;
 &h2;
 &h12;
@@ -126,6 +127,8 @@ sub s11 { $store = "S11"; $loc = "'2011'"; &call_div;	}
 sub s12 { $store = "S12"; $loc = "'2012'"; &call_div;	}
 sub s13a { $store = "2013"; $loc = "'2013'"; &call_div;	}
 sub s13b { $store = "2223"; $loc = "'2223'"; &call_div;	}
+sub d1 { $store = "D1"; $loc = "'2101'"; &call_div;	}
+sub d2 { $store = "D2"; $loc = "'2102'"; &call_div;	}
 sub tg1 { $store = "TG1"; $loc = "'3001'"; &call_div;	}
 sub tg2 { $store = "TG2"; $loc = "'3002'"; &call_div;	}
 sub tg3 { $store = "TG3"; $loc = "'3003'"; &call_div;	}
@@ -155,6 +158,7 @@ sub w80031 { $store = "NFA"; $loc = "'80031'"; &call_div;	}
 sub w80041 { $store = "Procter"; $loc = "'80041'"; &call_div;	}
 sub w80051 { $store = "Pagsabungan"; $loc = "'80051'"; &call_div;	}
 sub w80061 { $store = "Schenker"; $loc = "'80061'"; &call_div;	}
+sub w80151 { $store = "Lower Tingub"; $loc = "'80151'"; &call_div;	}
 
 
 sub call_div {
@@ -360,8 +364,7 @@ if($test eq 1){
 	}
 }
 
-$counter = 0;
-}
+$counter = 0;}
 
 
 sub new_sheet{
@@ -538,7 +541,7 @@ FROM(
 		LEFT JOIN (SELECT DISTINCT STORE LOC, STORE_NAME LOC_NAME FROM STORE UNION ALL SELECT DISTINCT WH AS LOC, WH_NAME LOC_NAME FROM WH)LOCATIONS ON SOH.LOC=LOCATIONS.LOC
 	WHERE LOC.STATUS IN ('A')  AND 
 	(
-	(SOH.LOC IN ('2004','2005','2006','2007','2009','2012','2013','2223','3012','4004','6002','6012','6013') AND SOH.ITEM IN (select item from skulist_detail where skulist in (53236,53304,53295))) OR 
+	(SOH.LOC IN ('2004','2005','2006','2007','2009','2012','2013','2223','2101','2102','3012','4004','6002','6012','6013') AND SOH.ITEM IN (select item from skulist_detail where skulist in (53236,53304,53295))) OR 
 	(SOH.LOC IN ('2001','2002','2003','2008','2010','2011','3001','3002','3003','3004','3005','3006','3007','3009','4002','4003','6001','6003','6004','6005','6006','6009','6010') AND SOH.ITEM IN (select item from skulist_detail where skulist in (53235,53294,53292))) 
 	)
 	)TBL 
@@ -572,7 +575,7 @@ FROM(
 		LEFT JOIN (SELECT DISTINCT STORE LOC, STORE_NAME LOC_NAME FROM STORE UNION ALL SELECT DISTINCT WH AS LOC, WH_NAME LOC_NAME FROM WH)LOCATIONS ON REPL.LOCATION=LOCATIONS.LOC
 	WHERE LOC.STATUS IN ('A')  AND 
 	(
-	(REPL.LOCATION IN ( '2004','2005','2006','2007','2009','2012','2013','2223','3012','4004','6002','6012','6013' ) AND REPL.ITEM IN (select item from skulist_detail where skulist in (53236,53304,53295))) OR 
+	(REPL.LOCATION IN ( '2004','2005','2006','2007','2009','2012','2013','2223','2101','2102','3012','4004','6002','6012','6013' ) AND REPL.ITEM IN (select item from skulist_detail where skulist in (53236,53304,53295))) OR 
 	(REPL.LOCATION IN ( '2001','2002','2003','2008','2010','2011','3001','3002','3003','3004','3005','3006','3007','3009','4002','4003','6001','6003','6004','6005','6006','6009','6010') AND REPL.ITEM IN (select item from skulist_detail where skulist in (53235,53294,53292))) 
 	)
 	)TBL 
@@ -603,7 +606,8 @@ my $bcc;
 GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
-$to = ' cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, victoria.abasolo@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, eljie.laquinon@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, ryanneil.dupay@metroretail.com.ph, anafatima.mancho@metroretail.com.ph, emily.silverio@metroretail.com.ph, luz.bitang@metroretail.com.ph,analiza.dano@metroretail.com.ph,jerson.roma@metroretail.com.ph,mopcplanning.foodretail@metroretail.com.ph,eric.molina@metroretail.com.ph ';
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
+$to = ' cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, victoria.abasolo@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, anafatima.mancho@metroretail.com.ph, emily.silverio@metroretail.com.ph, luz.bitang@metroretail.com.ph,analiza.dano@metroretail.com.ph,jerson.roma@metroretail.com.ph,mopcplanning.foodretail@metroretail.com.ph,eric.molina@metroretail.com.ph ';
 $bcc = 'rex.cabanilla@metroretail.com.ph, lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph';
 #$bcc = 'lea.gonzaga@metroretail.com.ph,cham.burgos@metroretail.com.ph';
 
@@ -695,8 +699,8 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
-$to = ' manuel.degamo@metroretail.com.ph, ace.olalia@metroretail.com.ph, alma.espino@metroretail.com.ph, angeli_christi.ladot@metroretail.com.ph, angelito.dublin@metroretail.com.ph, arlene.yanson@metroretail.com.ph, augosto.daria@metroretail.com.ph,  flor.bolante@metroretail.com.ph, teena.velasco@metroretail.com.ph, cristy.sy@metroretail.com.ph, diana.almagro@metroretail.com.ph, edgardo.lim@metroretail.com.ph, edris.tarrobal@metroretail.com.ph, fidela.villamor@metroretail.com.ph, genaro.felisilda@metroretail.com.ph, genevive.quinones@metroretail.com.ph, glenda.navares@metroretail.com.ph, joefrey.camu@metroretail.com.ph, jonalyn.diaz@metroretail.com.ph ';
-
+$to = 'manuel.degamo@metroretail.com.ph, ace.olalia@metroretail.com.ph, alma.espino@metroretail.com.ph, angeli_christi.ladot@metroretail.com.ph, angelito.dublin@metroretail.com.ph, arlene.yanson@metroretail.com.ph, augosto.daria@metroretail.com.ph,  flor.bolante@metroretail.com.ph, teena.velasco@metroretail.com.ph, cristy.sy@metroretail.com.ph, diana.almagro@metroretail.com.ph, edgardo.lim@metroretail.com.ph, edris.tarrobal@metroretail.com.ph, fidela.villamor@metroretail.com.ph, genaro.felisilda@metroretail.com.ph, genevive.quinones@metroretail.com.ph, glenda.navares@metroretail.com.ph, jonalyn.diaz@metroretail.com.ph ';
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 #$bcc = 'lea.gonzaga@metroretail.com.ph';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';
@@ -786,8 +790,8 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
-$to = ' josemarie.graciadas@metroretail.com.ph, jovany.polancos@metroretail.com.ph, judy.gilo@metroretail.com.ph, julie.montano@metroretail.com.ph, kathlene.procianos@metroretail.com.ph, limuel.ulanday@metroretail.com.ph, cristina.de_asis@metroretail.com.ph, mariajoana.cruz@metroretail.com.ph, may.sasedor@metroretail.com.ph, michelle.calsada@metroretail.com.ph, policarpo.mission@metroretail.com.ph, rex.refuerzo@metroretail.com.ph, ricky.tulda@metroretail.com.ph, ronald.dizon@metroretail.com.ph, roselle.agbayani@metroretail.com.ph, rowena.tangoan@metroretail.com.ph, roy.igot@metroretail.com.ph, tessie.cabanero@metroretail.com.ph, victoria.ferolino@metroretail.com.ph, wendel.gallo@metroretail.com.ph, juanjose.sibal@metroretail.com.ph, julie.montano@metroretail.com.ph, noli.lee@metroretail.com.ph, vivian.ablang@metroretail.com.ph, roselle.agbayani@metroretail.com.ph, irene.montemayor@metroretail.com.ph ';
-
+$to = ' josemarie.graciadas@metroretail.com.ph, jovany.polancos@metroretail.com.ph, judy.gilo@metroretail.com.ph, julie.montano@metroretail.com.ph, kathlene.procianos@metroretail.com.ph, limuel.ulanday@metroretail.com.ph, cristina.de_asis@metroretail.com.ph, mariajoana.cruz@metroretail.com.ph, may.sasedor@metroretail.com.ph, michelle.calsada@metroretail.com.ph, policarpo.mission@metroretail.com.ph, rex.refuerzo@metroretail.com.ph, ricky.tulda@metroretail.com.ph, ronald.dizon@metroretail.com.ph, roselle.agbayani@metroretail.com.ph, rowena.tangoan@metroretail.com.ph, roy.igot@metroretail.com.ph, tessie.cabanero@metroretail.com.ph, victoria.ferolino@metroretail.com.ph, wendel.gallo@metroretail.com.ph, julie.montano@metroretail.com.ph, noli.lee@metroretail.com.ph, vivian.ablang@metroretail.com.ph, roselle.agbayani@metroretail.com.ph, irene.montemayor@metroretail.com.ph ';
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 #$bcc = 'lea.gonzaga@metroretail.com.ph';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';

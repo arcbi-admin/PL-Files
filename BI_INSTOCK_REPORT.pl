@@ -107,7 +107,7 @@ foreach $loc ( '2001', '2002', '2003', '2008', '2010', '2011', '2001W', '4003', 
 
 sub call_luz {
 
-foreach $loc ( '2004', '2005', '2006', '2007', '2009', '2012', '2013', '2223', '3007', '3012', '4004', '6002', '6012' ){
+foreach $loc ( '2004', '2005', '2006', '2007', '2009', '2012', '2013', '2223', '3007', '3012', '4004', '6002', '6012', '2101','2102' ){
 # foreach $loc ( '2004', '2005' ){
 
 	$a += 6, $counter  =0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
@@ -135,7 +135,7 @@ $vis = 7; $col = 7; $test = 1; $stopper = 0;
 
 &heading_orig;
 
-foreach $loc ( '80001', '80011', '80031', '80041', '80051', '80061', '80141' ){
+foreach $loc ( '80001', '80011', '80031', '80041', '80051', '80061', '80141', '80151' ){
 # foreach $loc ( '80001' ){
 
 	$a += 6, $counter = 0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
@@ -219,7 +219,7 @@ $a = 0; $vis = 7; $col = 7; $test = 1; $stopper = 0;
 
 &heading_4;
 
-$loc1 = '2001', $loc2 = '2002', $loc3 = '2003', $loc4 = '2008', $loc5 = '2010', $loc6 = '2011', $loc7 = '2001W', $loc8 = '4003', $loc9 = '3009', $loc10 = '6001', $loc11 = '6003', $loc12 = '6005', $loc13 = '6010', $loc14 = '3001', $loc15 = '3002', $loc16 = '3003', $loc17 = '3004', $loc18 = '3005', $loc19 = '3006', $loc21 = '6004', $loc22 = '6008', $loc23 = '6009', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000', $region = 'Visayas Stores';
+$loc1 = '2001', $loc2 = '2002', $loc3 = '2003', $loc4 = '2008', $loc5 = '2010', $loc6 = '2011', $loc7 = '2001W', $loc8 = '4003', $loc9 = '3009', $loc10 = '6001', $loc11 = '6003', $loc12 = '6005', $loc13 = '6010', $loc14 = '3001', $loc15 = '3002', $loc16 = '3003', $loc17 = '3004', $loc18 = '3005', $loc19 = '3006', $loc21 = '6004', $loc22 = '6008', $loc23 = '6009', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000',$loc37 = '0000', $loc38 = '0000', $region = 'Visayas Stores';
 $a += 6, $counter = 0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
 
 $worksheet->set_column( $col, $col+1, 7 );
@@ -237,7 +237,7 @@ $test = 0, $a = 0, $counter = 0, $stopper = 1, $total_tot_items = 0, $total_rep_
 
 ##==========LUZON
 
-$loc1 = '2004', $loc2 = '2005', $loc3 = '2006', $loc4 = '2007', $loc5 = '2009', $loc6 = '2012', $loc7 = '2013', $loc8 = '2223', $loc9 = '3007', $loc10 = '4004', $loc11 = '6002', $loc12 = '6012', $loc13 = '3012', $loc14 = '0000', $loc15 = '0000', $loc16 = '0000', $loc17 = '0000', $loc18 = '0000', $loc19 = '0000', $loc21 = '0000', $loc22 = '0000', $loc23 = '0000', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000', $region = 'Luzon Stores';
+$loc1 = '2004', $loc2 = '2005', $loc3 = '2006', $loc4 = '2007', $loc5 = '2009', $loc6 = '2012', $loc7 = '2013', $loc8 = '2223', $loc9 = '3007', $loc10 = '4004', $loc11 = '6002', $loc12 = '6012', $loc13 = '3012', $loc14 = '2101', $loc15 = '2102', $loc16 = '0000', $loc17 = '0000', $loc18 = '0000', $loc19 = '0000', $loc21 = '0000', $loc22 = '0000', $loc23 = '0000', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000',$loc37 = '0000', $loc38 = '0000', $region = 'Luzon Stores';
 $a += 6, $counter  =0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
 
 $worksheet->set_column( $col, $col+1, 7 );
@@ -255,7 +255,7 @@ $test = 0, $a = 0, $counter = 0, $total_tot_items = 0, $total_rep_items = 0, $gr
 
 ##==========VISAYAS+LUZON
 
-$loc1 = '2001', $loc2 = '2002', $loc3 = '2003', $loc4 = '2008', $loc5 = '2010', $loc6 = '2011', $loc7 = '2001W', $loc8 = '4003', $loc9 = '3009', $loc10 = '6001', $loc11 = '6003', $loc12 = '6005', $loc13 = '6010', $loc14 = '3001', $loc15 = '3002', $loc16 = '3003', $loc17 = '3004', $loc18 = '3005', $loc19 = '3006', $loc21 = '6004', $loc22 = '6008', $loc23 = '2004', $loc24 = '2005', $loc25 = '2006', $loc26 = '2007', $loc27 = '2009', $loc28 = '2012', $loc29 = '2013', $loc30 = '2223', $loc31 = '3007', $loc32 = '4004', $loc33 = '6002', $loc34 = '6012', $loc35 = '3012', $loc36 = '6009', $region = 'All Stores';
+$loc1 = '2001', $loc2 = '2002', $loc3 = '2003', $loc4 = '2008', $loc5 = '2010', $loc6 = '2011', $loc7 = '2001W', $loc8 = '4003', $loc9 = '3009', $loc10 = '6001', $loc11 = '6003', $loc12 = '6005', $loc13 = '6010', $loc14 = '3001', $loc15 = '3002', $loc16 = '3003', $loc17 = '3004', $loc18 = '3005', $loc19 = '3006', $loc21 = '6004', $loc22 = '6008', $loc23 = '2004', $loc24 = '2005', $loc25 = '2006', $loc26 = '2007', $loc27 = '2009', $loc28 = '2012', $loc29 = '2013', $loc30 = '2223', $loc31 = '3007', $loc32 = '4004', $loc33 = '6002', $loc34 = '6012', $loc35 = '3012', $loc36 = '6009',$loc37 = '2101', $loc38 = '2102', $region = 'All Stores';
 $a += 6, $counter  =0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
 
 $worksheet->set_column( $col, $col+1, 7 );
@@ -273,7 +273,7 @@ $test = 0, $a = 0, $counter = 0, $total_tot_items = 0, $total_rep_items = 0, $gr
 
 ##==========WAREHOUSE
 
-$loc1 = '80001', $loc2 = '80011', $loc3 = '80031', $loc4 = '80041', $loc5 = '80051', $loc6 = '80061', $loc7 = '80141', $loc8 = '0000', $loc9 = '0000', $loc10 = '0000', $loc11 = '0000', $loc12 = '0000', $loc13 = '0000', $loc14 = '0000', $loc15 = '0000', $loc16 = '0000', $loc17 = '0000', $loc18 = '0000', $loc19 = '0000', $loc21 = '0000', $loc22 = '0000', $loc23 = '0000', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000', $region = 'All Warehouses';
+$loc1 = '80001', $loc2 = '80011', $loc3 = '80031', $loc4 = '80041', $loc5 = '80051', $loc6 = '80061', $loc7 = '80141', $loc8 = '80151', $loc9 = '0000', $loc10 = '0000', $loc11 = '0000', $loc12 = '0000', $loc13 = '0000', $loc14 = '0000', $loc15 = '0000', $loc16 = '0000', $loc17 = '0000', $loc18 = '0000', $loc19 = '0000', $loc21 = '0000', $loc22 = '0000', $loc23 = '0000', $loc24 = '0000', $loc25 = '0000', $loc26 = '0000', $loc27 = '0000', $loc28 = '0000', $loc29 = '0000', $loc30 = '0000', $loc31 = '0000', $loc32 = '0000', $loc33 = '0000', $loc34 = '0000', $loc35 = '0000', $loc36 = '0000', $region = 'All Warehouses';
 $a += 6, $counter = 0, $total_tot_items = 0, $total_rep_items = 0, $grp_tot_items = 0, $grp_rep_items = 0, $len = 0, $loc_pt = $a-2;
 
 $worksheet->set_column( $col, $col+1, 7 );
@@ -575,9 +575,9 @@ $dept_grp1 = '8010'; $dept_grp2 = '8020'; $dept_grp3 = '8030'; $dept_grp4 = '805
 $s1f2_tot_items = 0, $s1f2_rep_items = 0, $s1f2_counter = 0, $s1f2_row = 0;
 
 #$fmt1 = 1; $fmt2 = 2; $fmt3 = 3; $fmt4 = 4; $fmt5 = 5;
-$store1 = 'DS2001'; $store2 = 'DS2002'; $store3 = 'DS2003'; $store4 = 'DS2004'; $store5 = 'DS2006'; $store6 = 'DS2007'; $store7 = 'DS2009'; $store8 = 'DS2223'; $store9 = '0000'; $store10 = '0000'; $store11 = '0000'; $store12 = '0000'; $store13 = '0000'; $store14 = '0000'; $store15 = '0000'; $store16 = '0000'; $store17 = '0000'; $store18 = '0000'; $store19 = '0000'; $store20 = '0000'; $store21 = '0000'; $store22 = '0000'; $store23 = '0000'; $store24 = '0000'; $store25 = '0000'; $store26 = '0000';  $store27 = '0000'; $store28 = '0000'; $store29 = '0000'; $store30 = '0000'; $store31 = '0000'; $store32 = '0000'; $store33 = '0000'; $store34 = '0000'; $store35 = '0000'; $store36 = '0000'; $store37 = '0000'; $store38 = '0000'; $store39 = '0000'; $store40 = '0000';
+$store1 = 'DS2001'; $store2 = 'DS2002'; $store3 = 'DS2003'; $store4 = 'DS2004'; $store5 = 'DS2006'; $store6 = 'DS2007'; $store7 = 'DS2009'; $store8 = 'DS2223'; $store9 = 'DS2101'; $store10 = 'DS2102'; $store11 = '0000'; $store12 = '0000'; $store13 = '0000'; $store14 = '0000'; $store15 = '0000'; $store16 = '0000'; $store17 = '0000'; $store18 = '0000'; $store19 = '0000'; $store20 = '0000'; $store21 = '0000'; $store22 = '0000'; $store23 = '0000'; $store24 = '0000'; $store25 = '0000'; $store26 = '0000';  $store27 = '0000'; $store28 = '0000'; $store29 = '0000'; $store30 = '0000'; $store31 = '0000'; $store32 = '0000'; $store33 = '0000'; $store34 = '0000'; $store35 = '0000'; $store36 = '0000'; $store37 = '0000'; $store38 = '0000'; $store39 = '0000'; $store40 = '0000';
 
-$stor1 = '2001'; $stor2 = '2002'; $stor3 = '2003'; $stor4 = '2004'; $stor5 = '2006'; $stor6 = '2007'; $stor7 = '2009'; $stor8 = '2223'; $stor9 = '0000'; $stor10 = '0000'; $stor11 = '0000'; $stor12 = '0000';  $stor13 = '0000';    $stor14 = '0000';    $stor15 = '0000'; 
+$stor1 = '2001'; $stor2 = '2002'; $stor3 = '2003'; $stor4 = '2004'; $stor5 = '2006'; $stor6 = '2007'; $stor7 = '2009'; $stor8 = '2223'; $stor9 = '2101'; $stor10 = '2102'; $stor11 = '0000'; $stor12 = '0000';  $stor13 = '0000';    $stor14 = '0000';    $stor15 = '0000'; 
 
 	if($type_test eq 3){	&query_summary_merchandise;	} 
 	
@@ -671,9 +671,9 @@ $s1f2_tot_items = 0, $s1f2_rep_items = 0, $s1f2_counter = 0, $s1f2_row = 0;
 
 #$fmt1 = 1; $fmt2 = 2; $fmt3 = 3; $fmt4 = 4; $fmt5 = 5;
 
-$store1 = 'DS2001'; $store2 = 'DS2002'; $store3 = 'DS2003'; $store4 = 'DS2004'; $store5 = 'DS2006'; $store6 = 'DS2007'; $store7 = 'DS2009'; $store8 = 'DS2223'; $store9 = '0000'; $store10 = 'OOOO'; $store11 = '0000'; $store12 = '0000'; $store13 = '0000'; $store14 = '0000'; $store15 = '0000'; $store16 = '0000'; $store17 = '0000'; $store18 = '0000'; $store19 = '0000'; $store20 = '0000'; $store21 = '0000'; $store22 = '0000'; $store23 = '0000'; $store24 = '0000'; $store25 = '0000'; $store26 = '0000';  $store27 = '0000'; $store28 = '0000'; $store29 = '0000'; $store30 = '0000'; $store31 = '0000'; $store32 = '0000'; $store33 = '0000'; $store34 = '0000'; $store35 = '0000'; $store36 = '0000'; $store37 = '0000'; $store38 = '0000'; $store39 = '0000'; $store40 = '0000';
+$store1 = 'DS2001'; $store2 = 'DS2002'; $store3 = 'DS2003'; $store4 = 'DS2004'; $store5 = 'DS2006'; $store6 = 'DS2007'; $store7 = 'DS2009'; $store8 = 'DS2223'; $store9 = 'DS2101'; $store10 = 'DS2102'; $store11 = '0000'; $store12 = '0000'; $store13 = '0000'; $store14 = '0000'; $store15 = '0000'; $store16 = '0000'; $store17 = '0000'; $store18 = '0000'; $store19 = '0000'; $store20 = '0000'; $store21 = '0000'; $store22 = '0000'; $store23 = '0000'; $store24 = '0000'; $store25 = '0000'; $store26 = '0000';  $store27 = '0000'; $store28 = '0000'; $store29 = '0000'; $store30 = '0000'; $store31 = '0000'; $store32 = '0000'; $store33 = '0000'; $store34 = '0000'; $store35 = '0000'; $store36 = '0000'; $store37 = '0000'; $store38 = '0000'; $store39 = '0000'; $store40 = '0000';
 
-$stor1 = '2001'; $stor2 = '2002'; $stor3 = '2003'; $stor4 = '2004'; $stor5 = '2006'; $stor6 = '2007'; $stor7 = '2009'; $stor8 = '2223'; $stor9 = '0000'; $stor10 = '0000'; $stor11 = '0000'; $stor12 = '0000';  $stor13 = '0000';    $stor14 = '0000';    $stor15 = '0000'; 
+$stor1 = '2001'; $stor2 = '2002'; $stor3 = '2003'; $stor4 = '2004'; $stor5 = '2006'; $stor6 = '2007'; $stor7 = '2009'; $stor8 = '2223'; $stor9 = '2101'; $stor10 = '2102'; $stor11 = '0000'; $stor12 = '0000';  $stor13 = '0000';    $stor14 = '0000';    $stor15 = '0000'; 
 
 	if($type_test eq 1){	&query_summary;	} 
 	elsif($type_test eq 3){	&query_summary_merchandise;	} 
@@ -1663,7 +1663,7 @@ $test = qq{
 
 SELECT 
 CASE WHEN TO_CHAR(SGD.STORE) = '4002' THEN '2001W' ELSE TO_CHAR(SGD.STORE) END AS STORE_CODE,
-CASE WHEN SGD.STORE IN ('2012', '2013', '3009', '4004', '3010', '3011', '3012') THEN 'SU' || SGD.STORE	 WHEN SGD.STORE IN ('4002') THEN 'SU2001W'     WHEN SGD.STORE = '2223' THEN 'DS' || SGD.STORE	 ELSE SGD.MERCH_GROUP_CODE || SGD.STORE END AS STORE,
+CASE WHEN SGD.STORE IN ('2012', '2013', '3009', '4004', '3010', '3011', '3012') THEN 'SU' || SGD.STORE	 WHEN SGD.STORE IN ('4002') THEN 'SU2001W'     WHEN SGD.STORE IN ('2223','2101','2102') THEN 'DS' || SGD.STORE	 ELSE SGD.MERCH_GROUP_CODE || SGD.STORE END AS STORE,
 SGD.STORE_NAME STORE_NAME, 
 SGD.MERCH_GROUP_CODE, 
 CASE WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 9000) THEN 'DS'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8500) THEN 'SU'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8000 AND SGD.GROUP_NO = 8040) THEN 'SU'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8000 AND SGD.GROUP_NO != 8040) THEN 'DS'ELSE SGD.MERCH_GROUP_CODE END AS MERCH_GROUP_CODE_REV,
@@ -1704,7 +1704,7 @@ FROM
 	ON SGD.STORE = STK.LOCATION AND SGD.GROUP_NO = STK.GROUP_NO
 GROUP BY 
 CASE WHEN TO_CHAR(SGD.STORE) = '4002' THEN '2001W' ELSE TO_CHAR(SGD.STORE) END,
-CASE WHEN SGD.STORE IN ('2012', '2013', '3009', '4004', '3010', '3011', '3012') THEN 'SU' || SGD.STORE 	 WHEN SGD.STORE IN ('4002') THEN 'SU2001W'     WHEN SGD.STORE = '2223' THEN 'DS' || SGD.STORE	 ELSE SGD.MERCH_GROUP_CODE || SGD.STORE END,	 SGD.STORE_NAME, 
+CASE WHEN SGD.STORE IN ('2012', '2013', '3009', '4004', '3010', '3011', '3012') THEN 'SU' || SGD.STORE 	 WHEN SGD.STORE IN ('4002') THEN 'SU2001W'     WHEN SGD.STORE IN ('2223','2101','2102') THEN 'DS' || SGD.STORE	 ELSE SGD.MERCH_GROUP_CODE || SGD.STORE END,	 SGD.STORE_NAME, 
 SGD.MERCH_GROUP_CODE, 
 CASE WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 9000) THEN 'DS'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8500) THEN 'SU'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8000 AND SGD.GROUP_NO = 8040) THEN 'SU'     WHEN (SGD.MERCH_GROUP_CODE = 'OT' AND SGD.DIVISION = 8000 AND SGD.GROUP_NO != 8040) THEN 'DS'ELSE SGD.MERCH_GROUP_CODE END,
 SGD.MERCH_GROUP_DESC, 
@@ -1735,13 +1735,14 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
-$to = ' may.sasedor@metroretail.com.ph, donna.fernando@metroretail.com.ph, victoria.ferolino@metroretail.com.ph, wendel.gallo@metroretail.com.ph, ronald.dizon@metroretail.com.ph, alexander.tejedor@metroretail.com.ph, emily.silverio@metroretail.com.ph, chit.lazaro@metroretail.com.ph, jocelyn.sarmiento@metroretail.com.ph, charisse.mancao@metroretail.com.ph, cindy.yu@metroretail.com.ph, cresilda.dehayco@metroretail.com.ph, evan.inocencio@metroretail.com.ph, fe.botero@metroretail.com.ph, jonrel.nacor@metroretail.com.ph, judith.tud@metroretail.com.ph, junah.oliveron@metroretail.com.ph, lyn.cabatuan@metroretail.com.ph, zenda.mangabon@metroretail.com.ph, joyce.mirabueno@metroretail.com.ph, marygrace.ong@metroretail.com.ph, rowena.tangoan@metroretail.com.ph, genevive.quinones@metroretail.com.ph, angeli_cristi.ladot@metroretail.com.ph, edris.tarrobal@metroretail.com.ph, charmaine.buenaventura@metroretail.com.ph, augosto.daria@metroretail.com.ph, cj.jesena@metroretail.com.ph, gerry.guanlao@metroretail.com.ph ';
-
+$to = ' may.sasedor@metroretail.com.ph, donna.fernando@metroretail.com.ph, victoria.ferolino@metroretail.com.ph, wendel.gallo@metroretail.com.ph, ronald.dizon@metroretail.com.ph, alexander.tejedor@metroretail.com.ph, emily.silverio@metroretail.com.ph, chit.lazaro@metroretail.com.ph, jocelyn.sarmiento@metroretail.com.ph, charisse.mancao@metroretail.com.ph, cindy.yu@metroretail.com.ph, cresilda.dehayco@metroretail.com.ph, evan.inocencio@metroretail.com.ph, fe.botero@metroretail.com.ph, jonrel.nacor@metroretail.com.ph, judith.tud@metroretail.com.ph, junah.oliveron@metroretail.com.ph, lyn.cabatuan@metroretail.com.ph, zenda.mangabon@metroretail.com.ph, joyce.mirabueno@metroretail.com.ph, marygrace.ong@metroretail.com.ph, rowena.tangoan@metroretail.com.ph, genevive.quinones@metroretail.com.ph, angeli_cristi.ladot@metroretail.com.ph, edris.tarrobal@metroretail.com.ph, charmaine.buenaventura@metroretail.com.ph, augosto.daria@metroretail.com.ph, cj.jesena@metroretail.com.ph, gerry.guanlao@metroretail.com.ph,
+regine.caparida@metroretail.com.ph,brein.tajanlangit@metroretail.com.ph,gea.badiang@metroretail.com.ph';
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 $cc = 'cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, jerson.roma@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, eljie.laquinon@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, ryanneil.dupay@metroretail.com.ph, anafatima.mancho@metroretail.com.ph, opcplanning@metroretail.com.ph, kristine.apurado@metroretail.com.ph, bebelyn.cabasan@metroretail.com.ph';
 
-$bcc = 'kent.mamalias@metroretail.com.ph, rex.cabanilla@metroretail.com.ph, lea.gonzaga@metroretail.com.ph, fili.mercado@metroretail.com.ph, annalyn.conde@metroretail.com.ph';
+$bcc = 'kent.mamalias@metroretail.com.ph, rex.cabanilla@metroretail.com.ph, lea.gonzaga@metroretail.com.ph, fili.mercado@metroretail.com.ph, annalyn.conde@metroretail.com.ph,eric.molina@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 
-$bcc = 'lea.gonzaga@metroretail.com.ph, eric.molina@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
+#$bcc = 'lea.gonzaga@metroretail.com.ph, eric.molina@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 		
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';
 		
@@ -1801,7 +1802,7 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
 $to = ' manuel.degamo@metroretail.com.ph, noli.lee@metroretail.com.ph, jovany.polancos@metroretail.com.ph, alma.espino@metroretail.com.ph, arlene.yanson@metroretail.com.ph, josemarie.graciadas@metroretail.com.ph, ronald.parragatos@metroretail.com.ph, vivian.ablang@metroretail.com.ph, emma.villoson@metroretail.com.ph, rachel.riva@metroretail.com.ph, roselle.agbayani@metroretail.com.ph, michelle.calsada@metroretail.com.ph, jonalyn.diaz@metroretail.com.ph, joseph.landicho@metroretail.com.ph, rex.refuerso@metroretail.com.ph, al_rey.candia@metroretail.com.ph, cheruvim.villaceran@metroretail.com.ph, mae_flor.lauronal@metroretail.com.ph, egan.pacquiao@metro.com.ph, evanguardia@metro.com.ph, rysalas@metro.com.ph, jdorimon@metro.com.ph, eestrera@metro.com.ph, efermo@metro.com.ph, irene.montemayor@metroretail.com.ph, limuel.ulanday@metroretail.com.ph, joefrey.camu@metroretail.com.ph, karan.malani@metroretail.com.ph, lia.chipeco@metroretail.com.ph, danice.tanael@metroretail.com.ph';
-
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 $cc = 'cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, jerson.roma@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, eljie.laquinon@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, ryanneil.dupay@metroretail.com.ph, anafatima.mancho@metroretail.com.ph';
 
 $bcc = 'lea.gonzaga@metroretail.com.ph, eric.molina@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
@@ -1864,7 +1865,7 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
 $to = ' carmelita.intia@metroretail.com.ph, consorcia.mullon@metroretail.com.ph, contessa.fernandez@metroretail.com.ph, delia.jakosalem@metroretail.com.ph, editha.cabriles@metroretail.com.ph, edna.prieto@metroretail.com.ph, jecil.cumayas@metroretail.com.ph, jennifer.yu@metroretail.com.ph, lorena.madraga@metroretail.com.ph, maryann.delarama@metroretail.com.ph, maryjoy.montes@metroretail.com.ph, mecelle.quimbo@metroretail.com.ph, mirasol.barcoma@metroretail.com.ph, nenita.cabigon@metroretail.com.ph, teresita.manatad@metroretail.com.ph, vilma.paner@metroretail.com.ph, melinda.uy@metroretail.com.ph, jgeniston@metro.com.ph, cartes@metro.com.ph, hcaberte@metro.com.ph, mvilla@metro.com.ph, mcabungcal@metro.com.ph, mcombinido@metro.com.ph, april.agapito@metroretail.com.ph, jordan.mok@metroretail.com.ph, marlita.portes@metroretail.com.ph, advento.resma@metroretail.com.ph, arlene.te@metroretail.com.ph, armando.pitogo@metroretail.com.ph, christine.lanohan@metroretail.com.ph, delvie.pitogo@metroretail.com.ph, emillie.ponsica@metroretail.com.ph ';
-
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 $cc = 'cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, jerson.roma@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, eljie.laquinon@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, ryanneil.dupay@metroretail.com.ph, anafatima.mancho@metroretail.com.ph';
 
 #$bcc = 'lea.gonzaga@metroretail.com.ph';
@@ -1928,7 +1929,7 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 
 $to = ' jessica.gaisano@metroretail.com.ph, keith.poblete@metroretail.com.ph, micah.alvarado@metroretail.com.ph, michelle.someros@metroretail.com.ph, ryan.uson@metroretail.com.ph, sheen.ducay@metroretail.com.ph, annie.desuyo@metroretail.com.ph, marlit.ignacio@metroretail.com.ph, mildred.quinones@metroretail.com.ph, rosemarie.saravia@metroretail.com.ph, rowena.conde@metroretail.com.ph, tessie.baldezamo@metroretail.com.ph, diana.almagro@metroretail.com.ph, angelito.dublin@metroretail.com.ph, arlene.yanson@metroretail.com.ph, charm.buenaventura@metroretail.com.ph, teena.velasco@metroretail.com.ph, cristy.sy@metroretail.com.ph, fidela.villamor@metroretail.com.ph, glenda.navares@metroretail.com.ph, jonalyn.diaz@metroretail.com.ph, josemarie.graciadas@metroretail.com.ph, judy.gilo@metroretail.com.ph, cristina.de_asis@metroretail.com.ph, mariajoana.cruz@metroretail.com.ph, ricky.tulda@metroretail.com.ph, roy.igot@metroretail.com.ph, analiza.dano@metroretail.com.ph, luz.bitang@metroretail.com.ph, ricky.aguas@metroretail.com.ph, maricel.mayorga@metroretail.com.ph, mirasol.barcoma@metroretail.com.ph, chedie.lim@metroretail.com.ph ';
-
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 $cc = 'cherry.gulloy@metroretail.com.ph, janice.bedrijo@metroretail.com.ph, jerson.roma@metroretail.com.ph, bermon.alcantara@metroretail.com.ph, nilynn.yosores@metroretail.com.ph, anafatima.mancho@metroretail.com.ph';
 
 #$bcc = 'kent.mamalias@metroretail.com.ph';

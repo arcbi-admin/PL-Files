@@ -35,7 +35,8 @@ while ( my $x =  $tst_query->fetchrow_hashref()){
 } 
 
 if ($test eq 1){
-	 
+	
+#change date here	
 	 $date = qq{ 
 	SELECT WEEK_NUMBER_THIS_YEAR, DATE_KEY, DATE_FLD, WEEK_ST_DATE_KEY, WEEK_END_DATE_KEY, YTD_DATE_KEY, YTD_DATE_FLD, YTD_DATE_KEY_LY, YTD_DATE_FLD_LY  FROM
 	  (SELECT WEEK_NUMBER_THIS_YEAR, DATE_KEY, TO_CHAR(DATE_FLD, 'DD Mon YYYY') DATE_FLD, WEEK_ST_DATE_KEY, WEEK_END_DATE_KEY 
@@ -4741,9 +4742,10 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1, $attachment_file_2 ) = @ARGV;
 
-$to = ' frank.gaisano@metroretail.com.ph, arthur.emmanuel@metroretail.com.ph, lucille.malazarte@metroretail.com.ph, melissa.catan@metroretail.com.ph, rex.cabanilla@metroretail.com.ph, karan.malani@metroretail.com.ph, lia.chipeco@metroretail.com.ph, chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph, margaret.ang@metroretail.com.ph, luz.bitang@metroretail.com.ph, emily.silverio@metroretail.com.ph ';
+$to = ' frank.gaisano@metroretail.com.ph, arthur.emmanuel@metroretail.com.ph, lucille.malazarte@metroretail.com.ph, melissa.catan@metroretail.com.ph, rex.cabanilla@metroretail.com.ph, karan.malani@metroretail.com.ph, lia.chipeco@metroretail.com.ph, chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph,luz.bitang@metroretail.com.ph, emily.silverio@metroretail.com.ph,joel.orense@metroretail.com.ph,dione.kocencio@metroretail.com.ph,harvey.ong@metroretail.com.ph';
 
-$bcc = 'lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,eric.molina@metroretail.com.ph,roel.gevana@metroretail.com.ph, rlegaspi@metro.com.ph, wendell.manumbaga@metroretail.com.ph,bernadette.rosell@metroretail.com.ph';
+$bcc = 'lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,eric.molina@metroretail.com.ph,roel.gevana@metroretail.com.ph,
+bernadette.rosell@metroretail.com.ph,rashel.legaspi@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 		
 #$to = ' lea.gonzaga@metroretail.com.ph,eric.molina@metroretail.com.ph ';
 

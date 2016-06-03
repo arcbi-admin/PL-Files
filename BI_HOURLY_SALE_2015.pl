@@ -41,7 +41,9 @@ $tst_query->execute();
 while ( my $x =  $tst_query->fetchrow_hashref()){
 	$update_time = $x->{UPDATE_TIME};
 } 
- 
+
+#Note: 29-APr-16 Metro UP Town Center opening. take out supermarket divisions (1000
+#Note: 7-May-16 Metro Fairview opening. 
 my $sth = $dbh->prepare(qq{
 SELECT DIVISION,DEPARTMENT, ACTUALA, BUDGETA, ACHA FROM 
 (SELECT 'DIVISION' AS DIVISION,'DEPARTMENT' AS DEPARTMENT, 'ACTUAL' AS ACTUALA, 'BUDGET' AS BUDGETA, 'ACH' AS ACHA FROM DUAL
@@ -67,7 +69,7 @@ FROM
 	  LEFT JOIN DIVISION D ON GROUPS.DIVISION = D.DIVISION
 	  LEFT JOIN BI_MERCH_GROUP BI ON BI.DIVISION = D.DIVISION
 	WHERE DC_DY_BSN = (TO_CHAR(SYSDATE, 'YYYY-MM-DD')) AND D.DIVISION NOT IN ('7500', '4000', '8000', '9000', '8500')
-	AND TO_NUMBER(H.ID_STR_RT) = '6006'	
+	AND TO_NUMBER(H.ID_STR_RT) = '2101'	
 	AND H.TS_RTN_HR <= (SELECT TO_CHAR(SYSDATE, 'HH24') NEW_TIME FROM DUAL)
 	AND H.TS_RTN_HR <= (SELECT TO_CHAR(SYSDATE, 'HH24') NEW_TIME FROM DUAL)
 	GROUP BY BI.MERCH_GROUP_CODE, BI.MERCH_GROUP_DESC, D.DIVISION, D.DIV_NAME,GROUPS.GROUP_NAME
@@ -285,14 +287,14 @@ my( $to, $subject ) = @ARGV;
 
 
 
-$to = 'arthur.emmanuel@metroretail.com.ph,frank.gaisano@metroretail.com.ph,chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph, karan.malani@metroretail.com.ph, lia.chipeco@metroretail.com.ph, marlita.portes@metroretail.com.ph, jennifer.yu@metroretail.com.ph, april.agapito@metroretail.com.ph, edna.prieto@metroretail.com.ph, tessie.baldezamo@metroretail.com.ph, chedie.lim@metroretail.com.ph, liberato.rodriguez@metroretail.com.ph,luz.bitang@metroretail.com.ph, emily.silverio@metroretail.com.ph, julie.montano@metroretail.com.ph, limuel.ulanday@metroretail.com.ph,delia.jakosalem@metroretail.com.ph,rene.babylonia@metroretail.com.ph, arthur.emmanuel@metroretail.com.ph,jayson.angeles@metroretail.com.ph,glenda.navares@metroretail.com.ph,may.sasedor@metroretail.com.ph,roy.igot@metroretail.com.ph,harvey.ong@metroretail.com.ph';
+$to = 'arthur.emmanuel@metroretail.com.ph,frank.gaisano@metroretail.com.ph,chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph, karan.malani@metroretail.com.ph, lia.chipeco@metroretail.com.ph, marlita.portes@metroretail.com.ph, jennifer.yu@metroretail.com.ph, april.agapito@metroretail.com.ph, edna.prieto@metroretail.com.ph, tessie.baldezamo@metroretail.com.ph, chedie.lim@metroretail.com.ph, liberato.rodriguez@metroretail.com.ph,luz.bitang@metroretail.com.ph, emily.silverio@metroretail.com.ph, julie.montano@metroretail.com.ph, limuel.ulanday@metroretail.com.ph,delia.jakosalem@metroretail.com.ph,rene.babylonia@metroretail.com.ph, arthur.emmanuel@metroretail.com.ph,jayson.angeles@metroretail.com.ph,glenda.navares@metroretail.com.ph,may.sasedor@metroretail.com.ph,roy.igot@metroretail.com.ph,harvey.ong@metroretail.com.ph,annalyn.conde@metroretail.com.ph,roel.gevana@metroretail.com.ph';
 
 
-$cc = 'rex.cabanilla@metroretail.com.ph, annalyn.conde@metroretail.com.ph,roel.gevana@metroretail.com.ph,wendell.manumbaga@metroretail.com.ph,bernadette.rosell@metroretail.com.ph,fe.botero@metroretail.com.ph,jeannie.demecillo@metroretail.com.ph,mariegrace.ong@metroretail.com.ph,tessie.cabanero@metroretail.com.ph,joyce.mirabueno@metroretail.com.ph,zenda.mangabon@metroretail.com.ph,jennifer.nardo@metroretail.com.ph,liberato.rodriguez@metroretail.com.ph,eric.molina@metroretail.com.ph,';
+$cc = 'rex.cabanilla@metroretail.com.ph,wendell.manumbaga@metroretail.com.ph,bernadette.rosell@metroretail.com.ph,fe.botero@metroretail.com.ph,jeannie.demecillo@metroretail.com.ph,mariegrace.ong@metroretail.com.ph,tessie.cabanero@metroretail.com.ph,joyce.mirabueno@metroretail.com.ph,zenda.mangabon@metroretail.com.ph,jennifer.nardo@metroretail.com.ph,liberato.rodriguez@metroretail.com.ph,eric.molina@metroretail.com.ph';
 
 
 
-$bcc = 'lea.gonzaga@metroretail.com.ph, philip.coronado@metroretail.com.ph,dax.granados@metroretail.com.ph';
+$bcc = 'lea.gonzaga@metroretail.com.ph, philip.coronado@metroretail.com.ph,dax.granados@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph,christopher.calalang@metroretail.com.ph';
 
 
 #$bcc = ' lea.gonzaga@metroretail.com.ph,eric.molina@metroretail.com.ph';
@@ -326,7 +328,7 @@ $boundary
 Content-Type: text/html; charset="iso-8859-1"
 
 <html>
-<b><font size="4">Super Metro Calbayog:Hourly Sales Report(By Merchandise) </font></b>
+<b><font size="4">Metro Fair view:Hourly Sales Report(By Merchandise) </font></b>
 <br>As of &nbsp;$update_time<br><br>
 
 $table1

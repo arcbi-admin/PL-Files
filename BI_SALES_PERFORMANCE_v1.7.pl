@@ -3706,12 +3706,12 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1, $attachment_file_2 ) = @ARGV;
 
-$to = ' arthur.emmanuel@metroretail.com.ph, frank.gaisano@metroretail.com.ph, lucille.malazarte@metroretail.com.ph, jj.moreno@metroretail.com.ph, rose.jose@metroretail.com.ph, rex.cabanilla@metroretail.com.ph,aljim.jamandre@metroretail.com.ph,harvey.ong@metroretail.com.ph';
+$to = 'arthur.emmanuel@metroretail.com.ph, frank.gaisano@metroretail.com.ph, lucille.malazarte@metroretail.com.ph, jj.moreno@metroretail.com.ph, rose.jose@metroretail.com.ph, rex.cabanilla@metroretail.com.ph,aljim.jamandre@metroretail.com.ph,harvey.ong@metroretail.com.ph';
 
-$cc =' annalyn.conde@metroretail.com.ph, arlene.valdez@metroretail.com.ph, rashel.legaspi@metroretail.com.ph,eric.molina@metroretail.com.ph';
+$cc =' annalyn.conde@metroretail.com.ph, arlene.valdez@metroretail.com.ph, rashel.legaspi@metroretail.com.ph,eric.molina@metroretail.com.ph  ';
 
 $bcc = 'lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,rex.cabanilla@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
-#$bcc = ' lea.gonzaga@metroretail.com.ph,eric.molina@metroretail.com.ph';
+#$bcc = ' lea.gonzaga@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';
 
@@ -3777,7 +3777,7 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1, $attachment_file_2 ) = @ARGV;
 
-$to = ' artemm12@aol.com, frankgaisano@gmail.com ';
+$to = 'artemm12@aol.com, frankgaisano@gmail.com ';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';	
 

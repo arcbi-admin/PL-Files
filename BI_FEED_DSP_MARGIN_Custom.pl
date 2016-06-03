@@ -105,7 +105,7 @@ if ($test eq 1){
 	&generate_csv;
 	
 	my $job1 = Win32::Job->new;
-	$job1->spawn( "cmd" , q{cmd /C "COMPILED_MARGIN_SALES_PERFORMANCE_v1.6.pl pause"});
+	$job1->spawn( "cmd" , q{cmd /C "COMPILED_MARGIN_SALES_PERFORMANCE_v1.7_Custom.pl pause"});
 	$job1->run(25000);
 	
 	&mail;

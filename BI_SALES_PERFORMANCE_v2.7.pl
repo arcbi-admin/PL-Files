@@ -42,7 +42,7 @@ if ($test eq 1){
 	SELECT WEEK_NUMBER_THIS_YEAR, DATE_KEY, DATE_FLD, WEEK_ST_DATE_KEY, WEEK_END_DATE_KEY, YTD_DATE_KEY, YTD_DATE_FLD, YTD_DATE_KEY_LY, YTD_DATE_FLD_LY  FROM
 	  (SELECT WEEK_NUMBER_THIS_YEAR, DATE_KEY, TO_CHAR(DATE_FLD, 'DD Mon YYYY') DATE_FLD, WEEK_ST_DATE_KEY, WEEK_END_DATE_KEY 
 		FROM DIM_DATE
-		WHERE DATE_FLD = (SELECT AGG_DLY_END_DATE_FLD FROM ADMIN_ETL_DATE_PARAMETER)-2),
+		WHERE DATE_FLD = (SELECT AGG_DLY_END_DATE_FLD FROM ADMIN_ETL_DATE_PARAMETER)),
 	  (SELECT DATE_KEY YTD_DATE_KEY, TO_CHAR(DATE_FLD, 'DD Mon YYYY') YTD_DATE_FLD, DATE_KEY_LY YTD_DATE_KEY_LY, TO_CHAR(DATE_FLD_LY, 'DD Mon YYYY') YTD_DATE_FLD_LY
 	  FROM DIM_DATE_PRL WHERE DAY_IN_YEAR = 1 AND QUARTER = 1 AND YEAR = (SELECT TO_CHAR(SYSDATE, 'YYYY') AS YEAR FROM DUAL))
 	 };
@@ -256,7 +256,7 @@ $a += 6;
 
 ##========================= BY STORE ===========================##
 
-foreach my $i ( '2001', '2001W', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2223', '3001', '3002', '3003', '3004', '3005', '3006', '3007', '3009', '3010', '3012', '4003', '4004', '6001', '6002', '6003', '6004', '6005', '6006','6009', '6010',,'6011','6012','6013' ){ 
+foreach my $i ( '2001', '2001W', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2223', '3001', '3002', '3003', '3004', '3005', '3006', '3007', '3009', '3010', '3012', '4003', '4004', '6001', '6002', '6003', '6004', '6005', '6006','6009', '6010','6011','6012','6013','2102','2101'){ 
 # foreach my $i ( '2001', '2001W' ){ 
 	$a += 6;	
 	&heading_2;
@@ -3703,18 +3703,16 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1, $attachment_file_2 ) = @ARGV;
 
-#$to = ' chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph, karan.malani@metroretail.com.ph, julie.montano@metroretail.com.ph, lia.chipeco@metroretail.com.ph, 
-#marlita.portes@metroretail.com.ph,jennifer.yu@metroretail.com.ph, jessica.gaisano@metroretail.com.ph, april.agapito@metroretail.com.ph, edna.prieto@metroretail.com.ph, 
-#tessie.baldezamo@metroretail.com.ph, delia.jakosalem@metroretail.com.ph, joyce.mirabueno@metroretail.com.ph, liberato.rodriguez@metroretail.com.ph, mariegrace.ong@metroretail.com.ph, 
-#nerissa.lagare@metroretail.com.ph, merrill.gaisano@metroretail.com.ph, chedie.lim@metroretail.com.ph, cj.jesena@metroretail.com.ph,cristy.sy@metroretail.com.ph,
-#arlene.te@metroretail.com.ph,harvey.ong@metroretail.com.ph,katherine.pereyra@metroretail.com.ph,myra.cobangbang@metroretail.com.ph,joel.orense@metroretail.com.ph,
-#joseph.balatbat@metroretail.com.ph';
+$to = 'chit.lazaro@metroretail.com.ph, fili.mercado@metroretail.com.ph, karan.malani@metroretail.com.ph, julie.montano@metroretail.com.ph, lia.chipeco@metroretail.com.ph, 
+marlita.portes@metroretail.com.ph, jennifer.yu@metroretail.com.ph, april.agapito@metroretail.com.ph, edna.prieto@metroretail.com.ph, 
+tessie.baldezamo@metroretail.com.ph, delia.jakosalem@metroretail.com.ph, joyce.mirabueno@metroretail.com.ph,  mariegrace.ong@metroretail.com.ph, chedie.lim@metroretail.com.ph, cristy.sy@metroretail.com.ph, arlene.te@metroretail.com.ph, harvey.ong@metroretail.com.ph, 
+myra.cobangbang@metroretail.com.ph,joel.orense@metroretail.com.ph, vivian.gaisano@yahoo.com,robin.pascual@metroretail.com.ph';
 
-#$cc ='roel.gevana@metroretail.com.ph, rashel.legaspi@metroretail.com.ph, wendell.manumbaga@metroretail.com.ph,eric.molina@metroretail.com.ph,bernadette.rosell@metroretail.com.ph';
+$cc ='roel.gevana@metroretail.com.ph, rashel.legaspi@metroretail.com.ph, eric.molina@metroretail.com.ph,bernadette.rosell@metroretail.com.ph';
 
-#$bcc = ' rex.cabanilla@metroretail.com.ph, lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
+$bcc = ' rex.cabanilla@metroretail.com.ph, lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 #$bcc = 'cham.burgos@metroretail.com.ph,lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph,rex.cabanilla@metroretail.com.ph,eric.molina@metroretail.com.ph';
-$bcc = 'lea.gonzaga@metroretail.com.ph,eric.molina@metroretail.com.ph';
+#$bcc = 'lea.gonzaga@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';
 
@@ -3780,9 +3778,9 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1, $attachment_file_2 ) = @ARGV;
 
-#$to = ' manuel.degamo@metroretail.com.ph, may.sasedor@metroretail.com.ph, limuel.ulanday@metroretail.com.ph, emily.silverio@metroretail.com.ph, glenda.navares@metroretail.com.ph, roy.igot@metroretail.com.ph, luz.bitang@metroretail.com.ph ';
+$to = 'manuel.degamo@metroretail.com.ph, may.sasedor@metroretail.com.ph, limuel.ulanday@metroretail.com.ph, emily.silverio@metroretail.com.ph, glenda.navares@metroretail.com.ph, roy.igot@metroretail.com.ph, luz.bitang@metroretail.com.ph ';
 
-#$bcc = ' lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph';
+#$bcc = 'lea.gonzaga@metroretail.com.ph, annalyn.conde@metroretail.com.ph';
 
 $from = 'Report Mailer<report.mailer@metroretail.com.ph>';
 

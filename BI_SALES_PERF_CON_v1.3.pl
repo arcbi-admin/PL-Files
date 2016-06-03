@@ -228,7 +228,7 @@ $a += 6;
 
 ##========================= BY STORE ===========================##
 
-foreach my $i ( '2001', '2001W', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2223', '3001', '3002', '3003', '3004', '3005', '3006', '3007', '3009', '3010', '3012', '4003', '4004', '6001', '6002', '6003', '6004', '6005','6006', '6009', '6010', '6012','6011','6013' ){ 
+foreach my $i ( '2001', '2001W', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2223', '3001', '3002', '3003', '3004', '3005', '3006', '3007', '3009', '3010', '3012', '4003', '4004', '6001', '6002', '6003', '6004', '6005','6006', '6009', '6010', '6012','6011','6013' ,'2102','2101'){ 
 #foreach my $i ( '2001', '2001W' ){ 
 	$a += 6;	
 	&heading_2;
@@ -3666,12 +3666,12 @@ GetOptions( 'cc=s' => \$cc, 'bcc=s' => \$bcc, );
 
 my( $to, $subject, $msgbody_file, $attachment_file_1 ) = @ARGV;
 
-$to = ' chit.lazaro@metrogaisano.com, fili.mercado@metrogaisano.com, karan.malani@metrogaisano.com, julie.montano@metrogaisano.com, lia.chipeco@metrogaisano.com, 
-marlita.portes@metrogaisano.com, jordan.mok@metrogaisano.com, peachy.aquino@metrogaisano.com, patricia.canton@metrogaisano.com, jennifer.yu@metrogaisano.com, 
-jessica.gaisano@metrogaisano.com, april.agapito@metrogaisano.com, edna.prieto@metrogaisano.com, tessie.baldezamo@metrogaisano.com, delia.jakosalem@metrogaisano.com, 
-jennifer.moreno@metrogaisano.com, chedie.lim@metrogaisano.com,glenda.navares@metrogaisano.com, may.sasedor@metrogaisano.com,limuel.ulanday@metroretail.com.ph,
-emily.silverio@metroretail.com.ph, roy.igot@metrogaisano.com,jayson.angeles@metroretail.com.ph, arlene.te@metroretail.com.ph,harvey.ong@metroretail.com.ph,
-katherine.pereyra@metroretail.com.ph,myra.cobangbang@metroretail.com.ph,joel.orense@metroretail.com.ph';
+$to = 'chit.lazaro@metrogaisano.com, fili.mercado@metrogaisano.com, karan.malani@metrogaisano.com, julie.montano@metrogaisano.com, lia.chipeco@metrogaisano.com, 
+marlita.portes@metrogaisano.com, jennifer.yu@metrogaisano.com, 
+april.agapito@metrogaisano.com, edna.prieto@metrogaisano.com, tessie.baldezamo@metrogaisano.com, delia.jakosalem@metrogaisano.com, 
+chedie.lim@metrogaisano.com,glenda.navares@metrogaisano.com, may.sasedor@metrogaisano.com, limuel.ulanday@metroretail.com.ph,
+emily.silverio@metroretail.com.ph, roy.igot@metrogaisano.com, jayson.angeles@metroretail.com.ph, arlene.te@metroretail.com.ph, harvey.ong@metroretail.com.ph,
+myra.cobangbang@metroretail.com.ph, joel.orense@metroretail.com.ph';
 
 $bcc = ' rex.cabanilla@metrogaisano.com, kent.mamalias@metrogaisano.com, lea.gonzaga@metrogaisano.com, annalyn.conde@metrogaisano.com, cham.burgos@metrogaisano.com, roel.gevana@metrogaisano.com, rashel.legaspi@metrogaisano.com,eric.molina@metroretail.com.ph,bernadette.rosell@metroretail.com.ph,lloydpatrick.flores@metroretail.com.ph';
 
@@ -3737,7 +3737,7 @@ my( $to, $subject, $msgbody_file, $attachment_file_1 ) = @ARGV;
 
 $to = ' julie.montano@metroretail.com.ph';
 
-$bcc = 'lea.gonzaga@metrogaisano.com, annalyn.conde@metrogaisano.com, eric.molina@metroretail.com.ph';
+#$bcc = 'lea.gonzaga@metrogaisano.com, annalyn.conde@metrogaisano.com, eric.molina@metroretail.com.ph';
 		
 $from = 'Report Mailer<report.mailer@metrogaisano.com>';
 		

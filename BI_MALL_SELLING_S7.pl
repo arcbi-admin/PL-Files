@@ -14,7 +14,7 @@ use MIME::QuotedPrint;
 use MIME::Base64;
 use Mail::Sendmail;
 
-
+#printf "BI MALL SELLING\n";
 $test_query = qq{ SELECT CASE WHEN EXISTS (SELECT *
 					FROM ADMIN_ETL_LOG 
 					WHERE TO_DATE(LOG_DATE, 'DD-MON-YY') = TO_DATE(SYSDATE,'DD-MON-YY') AND TASK_ID = 'IntSalesDspTy' AND ERR_CODE = 0) THEN 1 ELSE 0 END STATUS 
@@ -160,7 +160,7 @@ my( $to, $subject, $msgbody_file, $attachment_file ) = @ARGV;
 #$to ='april.agapito@metrogaisano.com,ester.mendoza@metroretail.com.ph,rosemarie.saravia@metroretail.com.ph,nemesio.panugan@metrogaisano.com,christine.lanohan@metrogaisano.com,rhoda.camporedondo@metrogaisano.com,cristina.de_asis@metroretail.com.ph';
 $to ='april.agapito@metrogaisano.com, ronald.dizon@metroretail.com.ph,chloy.lamasan@metroretail.com.ph,rosemarie.saravia@metroretail.com.ph,ester.mendoza@metroretail.com.ph,nemesio.panugan@metroretail.com.ph,christine.lanohan@metroretail.com.ph,jay.aguilar@metroretail.com.ph,frank.arevalo@metroretail.com.ph';
 
-#$to = 'lea.gonzaga@metrogaisano.com';
+#$to = 'lloydpatrick.flores@metroretail.com.ph';
 
 $bcc = ' rex.cabanilla@metrogaisano.com, lea.gonzaga@metrogaisano.com, annalyn.conde@metrogaisano.com,philip.coronado@metrogaisano.com';
 
